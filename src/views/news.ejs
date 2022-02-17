@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Today|24*7</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="heading">
+    <div class="header__logo">
+        <h1>News Today </h1>
+    </div>
+    <div class="header__search">About Us</div>
+    </header>
+    <!--This is for headline-->
+   <div class="headline">Todays HeadLines</div>
+    <div cass="wrapper">
+       <div class="news">
+      
+        <% if(articles!=null){%>
+     <% articles.forEach(function(article,index){%>
+        <a href="<%-article.url%>" class="news__card" target="_blank">
+     <img src="<%-article.urlToImage%>" alt="">
+     <h3><%-article.title%></h3>
+     <h5><%-article.source.name%></h5>
+     <h5><%-article.publishedAt%></h5>
+   
+     </a>
+    <% }) %>
+    <%} else {%>
+      <div class="warning"> No Posts Found yet</div>
+        <%}%>
+       </div>
+     </div>
+     <!--This is for sports-->
+     <div class="headline">Sports Corner</div>
+     <div cass="wrapper">
+        <div class="news">
+       
+         <% if(articles!=null){%>
+      <% sportArticles.forEach(function(article,index){%>
+         <a href="<%-article.url%>" class="news__card" target="_blank">
+      <img src="<%-article.urlToImage%>" alt="">
+      <h3><%-article.title%></h3>
+      <h5><%-article.source.name%></h5>
+      <h5><%-article.publishedAt%></h5>
+     
+      </a>
+     <% }) %>
+     <%} else {%>
+       <div class="warning"> No Posts Found yet</div>
+         <%}%>
+        </div>
+      </div>
+      <!--This is for tech News-->
+      <div class="headline">TechnoThon</div>
+     <div cass="wrapper">
+        <div class="news">
+       
+         <% if(articles!=null){%>
+      <% techArticles.forEach(function(article,index){%>
+         <a href="<%-article.url%>" class="news__card" target="_blank">
+      <img src="<%-article.urlToImage%>" alt="">
+      <h3><%-article.title%></h3>
+      <h5><%-article.source.name%></h5>
+      <h5><%-article.publishedAt%></h5>
+     
+      </a>
+     <% }) %>
+     <%} else {%>
+       <div class="warning"> No Posts Found yet</div>
+         <%}%>
+        </div>
+      </div>
+      <!--footer-->
+      
+    <footer>
+        
+        <ul class="footer-links">
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Disclaimer</a>
+          </li>
+       </ul>
+  
+    
+      </footer>
+</body>
+</html>
